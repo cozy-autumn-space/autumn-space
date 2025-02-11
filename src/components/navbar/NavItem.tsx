@@ -1,13 +1,13 @@
+import { NavLink } from "react-router";
+
 export interface NavItemProps {
     text: string,
-    url: string
+    path: string
 }
 
-const NavItem = ({ text, url }: NavItemProps) => {
-    console.log(text, url);
-
+const NavItem = ({ text, path }: NavItemProps) => {
     return (
-        <a href={url}>{text}</a>
+        <NavLink to={path}>{text}</NavLink>
     );
 };
 
